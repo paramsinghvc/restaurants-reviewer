@@ -29,12 +29,13 @@
         "handlebars": "^4.0.6",
         "isomorphic-fetch": "^2.2.1",
         "path": "^0.12.7",
-        "run-sequence": "^1.2.2"
-    },
-    "devDependencies": {
+        "run-sequence": "^1.2.2",
         "babelify": "^7.3.0",
         "browserify": "^13.1.1",
         "vinyl-buffer": "^1.0.0",
         "vinyl-source-stream": "^1.1.0"
+    },
+    "devDependencies": {
+
     }
 }
