@@ -48,8 +48,6 @@ gulp.task('html', function() {
         .pipe(gulp.dest('.'));
 });
 
-gulp.watch(['main.js', './src/**/*.js'], ['scripts']).on('change', reload);
-gulp.watch('./styles/**/*.scss', ['sass']).on('change', reload);
 
 gulp.task('scripts:prod', ['clean'], () => {
     return browserify({ entries: ['main.js'], extensions: ['.js'], debug: true })
@@ -69,7 +67,14 @@ gulp.task('serve:dist', () => {
                 baseDir: '.'
             }
         })
+        gulp.watch(['main.js', './src/**/*.js'], ['scripts']).on('change', reload);
+        gulp.watch('./styles/**/*.scss', ['sass']).on('change', reload);
     })
+
+})
+
+gulp.task('serve:prod', (callback) => {
+    return runSequence('scripts:prod', 'sass', 'html', callback);
 })
 
 gulp.task('serve', ['default']);
@@ -82,6 +87,9 @@ gulp.task('default', () => {
                 baseDir: '.'
             }
         })
+        gulp.watch(['main.js', './src/**/*.js'], ['scripts']).on('change', reload);
+        gulp.watch('./styles/**/*.scss', ['sass']).on('change', reload);
+
     })
 
 })
