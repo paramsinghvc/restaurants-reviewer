@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Restaurant Reviewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//cdn.muicss.com/mui-0.9.5/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.9.5/js/mui.min.js"></script>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/build/style.css">
+    <!-- endinject -->
+</head>
+
+<body>
+    <header class="mui-appbar">
+        <p class="logo" tabindex="0">Restaurants Reviewer</p>
+    </header>
+    <main class="mui-container">
+        <ul id="r-list" class="mui-row" role="list">
+        </ul>
+    </main>
+    <footer>
+    </footer>
+    <section class="r-details" id="r-details" tabindex="0" role="dialog">
+        <img src="" id="p-img" role="presentation" />
+        <div class="content">
+            <div class="back-arrow" role="button" id="arrow" role="button" tabindex="0"></div>
+            <section id="details-info"></section>
+            <section class="reviews">
+                <h3>Reviews</h3>
+                <form id="rating-form" action="#">
+                    <div id="rating-star"></div>
+                    <div class="form-holder">
+                        <label for="review-txt">Give Rating
+                            <input type="text" id="review-txt" />
+                        </label>
+                        <button type="submit">Publish Review</button>
+                    </div>
+                </form>
+                <ul id="reviews-holder" role="list">
+                </ul>
+            </section>
+        </div>
+    </section>
+    <script type="template/x-template" id="res-template">
+        <li class="res-holder mui-panel mui-col-md-12" role="listitem" tabindex="0">
+            <img src="{{image}}" alt="{{name}}" tabindex="-1" />
+            <section class="info">
+                <h2 aria-label="Restaurant Name {{name}}" tabindex="-1">{{name}}</h2>
+                <p aria-label="Restaurant Address {{address}}" tabindex="-1">{{address}}</p>
+                <p aria-label="Restaurant opening hours {{hours}}" tabindex="-1">{{hours}}</p>
+            </section>
+        </li>
+    </script>
+    <script type="template/x-template" id="res-details-template">
+        <h2 tabindex="0" aria-label="name of restaurant">
+        	{{name}}
+        </h2>
+        <p tabindex="0" aria-label="restaurant address">
+            {{address}}
+        </p>
+        <p tabindex="0" aria-label="restaurant opening hours">
+            {{hours}}
+        </p>
+    </script>
+    <script type="template/x-template" id="review-template">
+        <li role="listitem">
+            <div class="name-rating">
+                <p class="cust-name" tabindex="0" aria-label="customer name">{{name}}</p>
+                <p class="date-posted" tabindex="0" aria-label="date of review posted"> {{date}}</p>
+            </div>
+            <div class="rating">{{rating}}</div>
+            <p class="review-msg" tabindex="0" aria-label="review"> {{msg}}</p>
+        </li>
+    </script>
+    <script type="template/x-template" id="rating-template">
+        <div class="rating-holder" role="list">
+    </script>
+    <!-- inject:js -->
+    <script src="/build/bundle.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+[{
+    "name": "The Zodiac Bistro",
+    "address": "Greater Kailash 1, M Block Market, Delhi",
+    "hours": "Weekdays - 10 am to 11:45 pm",
+    "image": "https://b.zmtcdn.com/data/res_imagery/308741_CHAIN_bee67e363e99ac549b34c85ffe5d8de7.jpg?fit=around%7C200%3A150&crop=200%3A200%3B%2A%2C%2A&output-format=webp",
+    "reviews": [{
+        "name": "Param Singh",
+        "rating": "4",
+        "date": "10 May 16",
+        "msg": "A decent small place. their kitchen is closed for renovation but still they are serving decent food. if you are at claridges you must try out their other restaurants."
+    }, {
+        "name": "Dylan",
+        "rating": "3",
+        "date": "12 May 16",
+        "msg": "The buffet has various options so I went for it. The interiors were classy and bright. The buffet was well arranged and seemed pretty inviting."
+    }, {
+        "name": "Dominique",
+        "rating": "4",
+        "date": "12 Nov 16",
+        "msg": "This place is a small little coffee shop at the claridges. I tried their buffet breakfast. The spread is a bit limited. It tried uttapam, idli, kachori, paneer parantha, toast along with coffee."
+    }, {
+        "name": "Dhruv",
+        "rating": "5",
+        "date": "10 May 16",
+        "msg": "Great menu choice for food and drinks, we chose the buffet option and weren't disappointed, the choices were amazing and well presented and topped up on a regular basis by kitchen staff."
+    }]
+}, {
+    "name": "Pickwicks - The Claridges",
+    "address": "East of Kailash",
+    "hours": "Weekdays - 9 am to 10:45 pm",
+    "image" : "https://b.zmtcdn.com/data/res_imagery/8222_RESTAURANT_obp1.jpg?fit=around%7C200%3A150&crop=200%3A200%3B%2A%2C%2A&output-format=webp",
+    "reviews": [{
+        "name": "Pompeii",
+        "rating": "4",
+        "date": "10 May 16",
+        "msg": "A decent small place. their kitchen is closed for renovation but still they are serving decent food. if you are at claridges you must try out their other restaurants."
+    }, {
+        "name": "Naina",
+        "rating": "3",
+        "date": "12 May 16",
+        "msg": "The buffet has various options so I went for it. The interiors were classy and bright. The buffet was well arranged and seemed pretty inviting."
+    }, {
+        "name": "Dominique",
+        "rating": "4",
+        "date": "12 Nov 16",
+        "msg": "This place is a small little coffee shop at the claridges. I tried their buffet breakfast. The spread is a bit limited. It tried uttapam, idli, kachori, paneer parantha, toast along with coffee."
+    }]
+}, {
+
+    "name": "Cafe Illuminati",
+    "address": "Khan Market, New Delhi",
+    "hours": "10 am to 10:45 pm",
+    "image" : "https://b.zmtcdn.com/data/pictures/chains/4/264/63364f17e0d257267f0132eb3b73d1fb_featured_v2.png?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A&output-format=webp",
+    "reviews": [{
+        "name": "Zyan",
+        "rating": "4",
+        "date": "10 May 16",
+        "msg": "A decent small place. their kitchen is closed for renovation but still they are serving decent food. if you are at claridges you must try out their other restaurants."
+    }, {
+        "name": "Mallik",
+        "rating": "3",
+        "date": "12 May 16",
+        "msg": "The buffet has various options so I went for it. The interiors were classy and bright. The buffet was well arranged and seemed pretty inviting."
+    }, {
+        "name": "Debonita",
+        "rating": "5",
+        "date": "12 Nov 16",
+        "msg": "This place is a small little coffee shop at the claridges. I tried their buffet breakfast. The spread is a bit limited. It tried uttapam, idli, kachori, paneer parantha, toast along with coffee."
+    }]
+
+}, {
+    "name": "Speedy Chow",
+    "address": "Kailash Colony, New Delhi",
+    "hours": "11 am to 12 pm",
+    "image" : "https://b.zmtcdn.com/data/pictures/1/18237321/fd0bb4337c2f80f603a02b9772a0bf5f_featured_v2.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A&output-format=webp",
+    "reviews": [{
+        "name": "Param Singh",
+        "rating": "4",
+        "date": "10 May 16",
+        "msg": "A decent small place. their kitchen is closed for renovation but still they are serving decent food. if you are at claridges you must try out their other restaurants."
+    }, {
+        "name": "Tushar",
+        "rating": "3",
+        "date": "12 May 16",
+        "msg": "Having lunch in jade as picwik was full they were courteous enough to serve some of my favs from pickwik in jade. But along with me the table next to me saw a mouse inside the restaurant and complained but the guy simply said ok ma'am. Atrocious "
+    }, {
+        "name": "Vikram",
+        "rating": "4",
+        "date": "12 Nov 16",
+        "msg": "This place is a small little coffee shop at the claridges. I tried their buffet breakfast. The spread is a bit limited. It tried uttapam, idli, kachori, paneer parantha, toast along with coffee."
+    }]
+}]
