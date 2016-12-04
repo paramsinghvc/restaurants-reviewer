@@ -78,6 +78,13 @@
     <script type="template/x-template" id="rating-template">
         <div class="rating-holder" role="list">
     </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js', function(reg) {
+            console.log(reg);
+        })
+    }
+    </script>
     <!-- inject:js -->
     <script src="/build/bundle.js"></script>
     <!-- endinject -->
