@@ -63,7 +63,7 @@ class Restaurants {
     openDetailsModal(activeLi, data) {
         let self = this;
         let i = activeLi.querySelector('img');
-        document.body.style.overflowY = 'hidden';
+        // document.body.style.overflowY = 'hidden';
         self.restoreImage = self.animateImage(i);
         self.detailsModal.style.display = 'block';
 
@@ -93,16 +93,16 @@ class Restaurants {
             RatingObj.addInteractivity(this.ratingStar);
 
             this.ratingForm.onsubmit = function(e) {
-            	e.preventDefault();
-            	alert('Review submitted successfully')
-            	return false;
+                e.preventDefault();
+                alert('Review submitted successfully')
+                return false;
             }
         })
     }
 
     closeDetailsModal() {
         let self = this;
-        document.body.style.overflowY = 'scroll';
+        // document.body.style.overflowY = 'scroll';
         self.detailsModal.querySelector('#arrow').style.transform = 'translateX(-100px)';
         self.reviewsHolder.innerHTML = '';
         setTimeout(() => {
@@ -114,16 +114,31 @@ class Restaurants {
 
     animateImage(img) {
 
-        img.style.position = 'fixed';
+        img.style.position = 'absolute';
         img.style.zIndex = 101;
         let bounds = img.getBoundingClientRect();
         let topOffset = bounds.top;
-
-        img.style.transform = `translateY(${-topOffset + 80}px)`;
+        let leftOffset = bounds.left;
+        var xOffset = (window.innerWidth < 1078) ? ((window.innerWidth / 2) - (100 + leftOffset)) : 50;
+        img.style.transform = `translate3d(${xOffset}px, ${-topOffset + 50}px, 0px)`;
         let boundsFinal = img.getBoundingClientRect();
-        let topOffsetFinal = boundsFinal.top;
+        let clonedImg = img.cloneNode(true);
+        clonedImg.style.transform = `translate3d(${boundsFinal.left + xOffset}px, 50px, 0)`;
+        setTimeout(() => {
+
+            this.detailsModal.append(clonedImg);
+            img.style.visibility = 'hidden';
+        }, 500);
+        // let boundsFinal = img.getBoundingClientRect();
+        // // console.log(boundsFinal);
+        // let topOffsetFinal = boundsFinal.top;
+        // let leftOffsetFinal = boundsFinal.left;
+
         return function() {
-            img.style.transform = `translateY(${topOffsetFinal - topOffset}px)`;
+            // console.log(topOffsetFinal - topOffset);
+            img.style.visibility = 'visible';
+            this.detailsModal.removeChild(clonedImg);
+            img.style.transform = `translate3d(0px, 0px, 0px)`;
             img.style.zIndex = 1;
             // setTimeout(() => {
             img.style.position = 'static';

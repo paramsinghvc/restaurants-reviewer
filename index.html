@@ -47,9 +47,11 @@
         </div>
     </section>
     <script type="template/x-template" id="res-template">
-        <li class="res-holder mui-panel mui-col-md-12" role="listitem" tabindex="0">
-            <img src="{{image}}" alt="{{name}}" tabindex="-1" />
-            <section class="info">
+        <li class="res-holder mui-panel mui-col-md-12 mui-row" role="listitem" tabindex="0">
+            <div class="mui-col-xs-12 mui-col-md-3 img-holder">
+                <img src="{{image}}" alt="{{name}}" tabindex="-1" />
+            </div>
+            <section class="info" class="mui-col-xs-12 mui-col-md-9">
                 <h2 aria-label="Restaurant Name {{name}}" tabindex="-1">{{name}}</h2>
                 <p aria-label="Restaurant Address {{address}}" tabindex="-1">{{address}}</p>
                 <p aria-label="Restaurant opening hours {{hours}}" tabindex="-1">{{hours}}</p>
@@ -58,7 +60,7 @@
     </script>
     <script type="template/x-template" id="res-details-template">
         <h2 tabindex="0" aria-label="name of restaurant">
-        	{{name}}
+            {{name}}
         </h2>
         <p tabindex="0" aria-label="restaurant address">
             {{address}}
@@ -81,7 +83,7 @@
         <div class="rating-holder" role="list">
     </script>
     <script>
-    if ('serviceWorker' in navigator) {
+    if ('serviceWorker' in navigator && window.location.protocol === 'https') {
         navigator.serviceWorker.register('./sw.js', function(reg) {
             console.log(reg);
         })

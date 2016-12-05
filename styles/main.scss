@@ -22,16 +22,16 @@ body {
             list-style: none;
             .res-holder {
                 cursor: pointer;
-                display: flex;
+                // display: flex;
                 img {
                     margin-right: 20px;
                     // min-width: 15%;
                     transition: transform 0.5s;
                 }
                 .info {
-                    display: flex;
-                    flex-direction: column;
-                    flex: 1 0 auto;
+                    // display: flex;
+                    // flex-direction: column;
+                    // flex: 1 0 auto;
                     h2 {
                         margin-top: 0;
                     }
@@ -45,6 +45,7 @@ body {
         transition: display 1.2s;
         width: 100%;
         height: 100%;
+        overflow-y: scroll;
         z-index: 100;
         top: 0;
         left: 0;
@@ -53,7 +54,8 @@ body {
         #p-img {
             width: 100%;
             height: 100%;
-            // position: fixed;
+            position: fixed;
+            background-attachment: fixed;
             background-size: cover;
             object-fit: cover;
             transform: scale(1.2);
@@ -72,7 +74,10 @@ body {
             height: 100%;
             #details-info {
                 left: 30%;
-                position: inherit;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: relative;
                 top: 58px;
                 color: #fff;
                 text-shadow: 0 0 12px #000;
@@ -123,15 +128,15 @@ body {
                 }
             }
             .reviews {
-                position: inherit;
-                top: 300px;
+                position: relative;
+                top: 220px;
                 // left: 5%;
                 background: rgba(0, 0, 0, 0.5);
                 margin: 0 10% 5% 10%;
-                overflow-y: scroll;
-                height: 300px;
+                // overflow-y: scroll;
+                // height: 300px;
                 color: #fff;
-                padding: 0px 40px;
+                padding: 20px 40px;
                 border-radius: 4px;
                 #reviews-holder {
                     margin-top: 30px;
@@ -185,6 +190,38 @@ body {
                 }
             }
             z-index: 102;
+        }
+    }
+}
+
+@media (max-width: 1078px) {
+    body {
+        // background-color: #000;
+        #r-details {
+            .content {
+                #details-info {
+                    left: initial;
+                    align-items: center;
+                    top: 270px;
+                }
+                .reviews {
+                    top: 300px;
+                }
+            }
+        }
+        .mui-container {
+            #r-list {
+                .res-holder {
+                    .img-holder {
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                    img {}
+                    .info {
+                        text-align: center;
+                    }
+                }
+            }
         }
     }
 }
