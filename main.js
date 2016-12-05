@@ -63,7 +63,8 @@ class Restaurants {
     openDetailsModal(activeLi, data) {
         let self = this;
         let i = activeLi.querySelector('img');
-        // document.body.style.overflowY = 'hidden';
+        document.body.style.overflowY = 'hidden';
+        self.detailsModal.style.overflowY = 'scroll';
         self.restoreImage = self.animateImage(i);
         self.detailsModal.style.display = 'block';
 
@@ -102,7 +103,7 @@ class Restaurants {
 
     closeDetailsModal() {
         let self = this;
-        // document.body.style.overflowY = 'scroll';
+        document.body.style.overflowY = 'scroll';
         self.detailsModal.querySelector('#arrow').style.transform = 'translateX(-100px)';
         self.reviewsHolder.innerHTML = '';
         setTimeout(() => {

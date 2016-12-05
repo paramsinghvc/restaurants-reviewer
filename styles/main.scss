@@ -5,6 +5,7 @@
 }
 
 body {
+    overflow-x: hidden;
     .mui-appbar {
         background: #16a085;
         display: flex;
@@ -19,6 +20,7 @@ body {
     .mui-container {
         margin-top: 10px;
         #r-list {
+            overflow-x: hidden;
             list-style: none;
             .res-holder {
                 cursor: pointer;
